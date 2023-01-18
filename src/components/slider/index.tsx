@@ -39,7 +39,7 @@ const Slider = () => {
             slidesData.map(slide => (
               <Slide 
                 key={slide.id}
-                img={slide.img}
+                image={slide.image}
                 backgroundColor={slide.backgroundColor}
                 title={slide.title}
                 description={slide.description}

@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 const Slide = ({
-  img,
+  image,
   backgroundColor,
   title,
   description,
 }: {
-  img: string;
+  image: string;
   title: string;
   backgroundColor: string;
   description: string;
@@ -16,7 +16,7 @@ const Slide = ({
     <div className="slide__container" style={{background: backgroundColor}}>
       <div className="slide__image-container">
         <picture className="slide__picture">
-          <source srcSet={img} media="(min-width: 600px)"/>
+          <source srcSet={image} media="(min-width: 600px)"/>
           <img src="" className="slide__image"/>
         </picture>
       </div>

@@ -16,7 +16,7 @@ const Categories = () => {
                         <p className="category__title">{category.title}</p>
                         <button className="category__button">SHOP NOW</button>
                     </div>
-                    <img src={category.img} className="category__image" />
+                    <img src={category.image} className="category__image" />
                 </Link>
             ))
 
