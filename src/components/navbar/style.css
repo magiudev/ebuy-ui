@@ -1,0 +1,106 @@
+.navbar__container {
+    background-color: black;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 60px 1fr 60px;
+    grid-template-areas: 
+        "void       logo        burger"
+        "register   register    register"
+        "login      login       login"
+        "cart       cart        cart";
+    padding: 10px;
+}
+
+.navbar__logo,
+.navbar__register,
+.navbar__login,
+.navbar__cart {
+    align-self: center;
+    justify-self: center;
+}
+
+.navbar__logo {
+    grid-area: logo;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar__register {
+    grid-area: register;
+}
+
+.navbar__login {
+    grid-area: login;
+}
+
+.navbar__cart {
+    grid-area: cart;
+}
+
+.navbar__register,
+.navbar__login,
+.navbar__cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+}
+
+.navbar__register:hover,
+.navbar__login:hover,
+.navbar__cart:hover {
+    background-color: rgb(24, 24, 24);
+}
+
+.navbar__link {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar__search-input {
+    border: none;
+    padding: 5px;
+    width: 70px;
+}
+
+.navbar__search-input:focus {
+    outline: none;
+}
+
+.navbar__register,
+.navbar__login,
+.navbar__cart {
+    max-height: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: max-height .5s ease-in-out, opacity .5s ease-in-out, z-index .5s ease-in-out;
+}
+
+.navbar--open .navbar__register,
+.navbar--open .navbar__login,
+.navbar--open .navbar__cart {
+    max-height: 70px;
+    z-index: 1;
+    opacity: 1;
+}
+
+@media only screen and (min-width: 800px) {
+    .navbar__container {
+        grid-template-rows: auto;
+        grid-template-columns: 100px 100px 100px 1fr 100px 100px 100px;
+        grid-template-areas: 
+            "void void void logo register login cart"
+        ;
+        grid-auto-columns: 0;
+        grid-auto-rows: 0;
+    }
+
+    .navbar__register,
+    .navbar__login,
+    .navbar__cart {
+        max-height: 70px;
+        z-index: 1;
+        opacity: 1;
+    }
+}
