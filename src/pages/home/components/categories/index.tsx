@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { categories } from "../../content";
+import { categories } from "../../../../content";
 import "./style.css";
 
 const Categories = () => {

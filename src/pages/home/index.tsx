@@ -1,8 +1,8 @@
-import Categories from "../../components/categories";
+import Categories from "./components/categories";
 import Footer from "../../components/footer";
 import Newsletter from "../../components/newsletter";
 import Navbar from "../../components/navbar";
-import Slider from "../../components/slider";
+import Slider from "./components/slider";
 import Products from "../../components/products";
 
 const Home = () => {

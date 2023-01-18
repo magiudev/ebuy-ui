@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { slidesData } from "../../content";
+import { slidesData } from "../../../../content";
 import Slide from "./components/slide";
 import "./style.css"
 
