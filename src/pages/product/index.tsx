@@ -2,11 +2,24 @@ import "./style.css";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
 import Newsletter from "../../components/newsletter";
+import { useState } from "react";
 
 const Product = () => {
+
+  const [numberOfCartItems, setNumberOfCartItems] = useState(0);
+  const increment = () => setNumberOfCartItems(numberOfCartItems + 1);
+  const decrement = () => {
+      if(numberOfCartItems > 1) setNumberOfCartItems(numberOfCartItems - 1);
+  }
+
+  const writeQuantity: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+    const newQuantity = parseInt(e.target.value);
+    if (/^\d*$/.test(String(newQuantity))) setNumberOfCartItems(newQuantity);
+  }
+
   return (
     <>
-        <Navbar />
+        <Navbar numberOfCartItems={numberOfCartItems}/>
         <div className="product-page__product-container">
             <div className="product-page__image-container">
               <img 
@@ -21,7 +34,7 @@ const Product = () => {
                 <div className="product-page__size-container">
                   <p>Size: </p>
                   <select className="product-page__select-button" name="size">
-                    <option disabled>Size</option>
+                    <option defaultValue='xs' disabled>Size</option>
                     <option value="xs">XS</option>
                     <option value="s">S</option>
                     <option value="m">M</option>
@@ -36,9 +49,15 @@ const Product = () => {
                   <div className="product-page__color-option" style={{ backgroundColor: "gray"}}></div>
                 </div>
                 <div className="product-page__count-container">
-                    <button className="product-page__quantity-button">-</button>
-                    <input type="text" className="product-page__count" />
-                    <button className="product-page__quantity-button">+</button>
+                    <button className="product-cart__quantity-button" onClick={decrement}>-</button>
+                    <input 
+                      type="text" 
+                      onChange={writeQuantity} 
+                      name="quantity" 
+                      value={numberOfCartItems} 
+                      className="product-cart__quantity-input" 
+                    />
+                    <button className="product-cart__quantity-button" onClick={increment}>+</button>
                 </div>
                 <button className="product-page__add-button">
                   ADD TO CART

@@ -4,7 +4,7 @@ import CartIcon from "./components/cartIcon";
 import Burger from "./components/burger";
 import "./style.css";
 
-const Navbar = () => {
+const Navbar = ({ numberOfCartItems = 0}: { numberOfCartItems?: number}) => {
 
     const [open, setOpen] = useState(false);
     const handleClick = () => setOpen(!open);
@@ -15,7 +15,7 @@ const Navbar = () => {
             <Burger handleClick={handleClick} />
             <Link to="/register" className="navbar__register navbar__link">REGISTER</Link>
             <Link to="#" className="navbar__login navbar__link">LOG IN</Link>
-            <div className="navbar__cart"><CartIcon /></div>
+            <div className="navbar__cart"><CartIcon numberOfCartItems={numberOfCartItems} /></div>
         </div>
     )
 }
