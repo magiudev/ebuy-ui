@@ -1,0 +1,134 @@
+.product-page__product-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vw;
+}
+
+.product-page__image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.product-page__image {
+    object-fit: contain;
+    width: 100%;
+}
+
+.product-page__product-info-container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+}
+
+.product-page__title {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.product-page__desc {
+    text-align: justify;
+    width: 100%;
+}
+
+.product-page__price {
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.product-page__count-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.product-page__count {
+    width: 20px;
+    text-align: center;
+}
+
+.product-page__count {
+    width: 40px;
+    height: 40px;
+}
+
+.product-page__count:focus {
+    outline: none;
+}
+
+
+.product-page__quantity-button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.product-page__quantity-button:focus {
+    outline: none;
+}
+
+.product-page__quantity-button:hover {
+    opacity: 0.7;
+}
+
+.product-page__size-container,
+.product-page__color-container {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.product-page__select-button:focus {
+    outline: none;
+}
+
+.product-page__color-option {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.product-page__add-button {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid teal;
+    background-color: transparent;
+    color: teal;
+    cursor: pointer;
+}
+
+.product-page__add-button:focus {
+    outline: none;
+}
+
+.product-page__add-button:hover {
+    background-color: teal;
+    color: white;
+}
+
+@media only screen and (min-width: 800px) {
+    .product-page__product-container {
+        flex-direction: row;
+        padding: 100px;
+    }
+
+    .product-page__product-info-container {
+        align-self: flex-start;
+        width: 50%;
+    }
+
+    .product-page__image-container {
+        align-self: flex-start;
+        width: 50%;
+    }
+}
