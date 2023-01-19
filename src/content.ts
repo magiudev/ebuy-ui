@@ -90,3 +90,22 @@ export const popularProducts = [
         image:"https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png",
     }
 ]
+
+export const productsInCart = [
+    {
+        id: 123456789,
+        name: "JESSIE THUNDER SHOES",
+        color: "black",
+        size: 3.75,
+        price: 30,
+        image: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614188818-TD1MTHU_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHERS_THUNDER_b01b1013-cd8d-48e7-bed9-52db26515dc4.png?crop=1xw:1.00xh;center,top&resize=480%3A%2A"
+    },
+    {
+        id: 234567891,
+        name: "HAKURA T-SHIRT",
+        color: "gray",
+        size: "M",
+        price: 20,
+        image: "https://i.pinimg.com/originals/2d/af/f8/2daff8e0823e51dd752704a47d5b795c.png"
+    }
+]
