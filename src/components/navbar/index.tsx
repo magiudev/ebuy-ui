@@ -14,7 +14,7 @@ const Navbar = () => {
             <Link to="/" className="navbar__logo"><h1>EBUY</h1></Link> 
             <Burger handleClick={handleClick} />
             <Link to="/register" className="navbar__register navbar__link">REGISTER</Link>
-            <Link to="/login" className="navbar__login navbar__link">LOG IN</Link>
+            <Link to="#" className="navbar__login navbar__link">LOG IN</Link>
             <div className="navbar__cart"><CartIcon /></div>
         </div>
     )
