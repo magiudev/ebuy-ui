@@ -32,7 +32,7 @@ const ProductInCart = ({
             <p><b>Size: </b>{size}</p>
             <div className="product-cart__counter-container">
                 <button className="product-cart__quantity-button">-</button>
-                <input type="text" name="quantity" value="1" className="product-cart__quantity-input" />
+                <input type="text" name="quantity" className="product-cart__quantity-input" />
                 <button className="product-cart__quantity-button">+</button>
             </div>
             <p className="product-cart__price">$ {price}</p>
