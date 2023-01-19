@@ -1,0 +1,92 @@
+.register__container {
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        rgba(230, 173, 179, 0),
+        rgba(230, 173, 179, 1)
+    );
+    background-size: cover;
+    background-position: center center;
+}
+
+.register__form {
+    width: 90vw;
+    min-width: 200px;
+    max-width: 700px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+}
+
+.register__input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.register__input {
+    padding: 10px;
+}
+
+.register__input:focus {
+    outline: none;
+}
+
+.register__button {
+    background-color: transparent;
+    color: white;
+    height: 30px;
+    border: 1px solid teal;
+    color: teal;
+}
+
+.register__button:hover {
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+}
+
+.register__link {
+    color: black;
+    text-decoration: none;
+}
+
+.register__link:hover {
+    text-decoration: underline;
+    cursor: pointer
+}
+
+.register__text {
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 600px) {
+    .register__container {
+        background: 
+            linear-gradient(
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 1)
+            ),
+            url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .register__form {
+        width: 80vw;
+    }
+
+    .register__input-group {
+        flex-direction: row;
+    }
+
+    .register__input {
+        flex-grow: 1;
+    }
+
+}
