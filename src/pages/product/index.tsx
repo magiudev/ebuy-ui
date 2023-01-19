@@ -3,23 +3,26 @@ import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
 import Newsletter from "../../components/newsletter";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { selectNumberOfCartItems, setNumberOfItems } from "../../store/cartSlice";
 
 const Product = () => {
 
-  const [numberOfCartItems, setNumberOfCartItems] = useState(0);
-  const increment = () => setNumberOfCartItems(numberOfCartItems + 1);
+  const dispatch = useDispatch();
+  const numberOfCartItems = useSelector(selectNumberOfCartItems);
+  const increment = () => dispatch(setNumberOfItems(numberOfCartItems + 1));
   const decrement = () => {
-      if(numberOfCartItems > 1) setNumberOfCartItems(numberOfCartItems - 1);
+      if(numberOfCartItems > 1) dispatch(setNumberOfItems(numberOfCartItems - 1));
   }
 
   const writeQuantity: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     const newQuantity = parseInt(e.target.value);
-    if (/^\d*$/.test(String(newQuantity))) setNumberOfCartItems(newQuantity);
+    if (/^\d*$/.test(String(newQuantity))) setNumberOfItems(newQuantity);
   }
 
   return (
     <>
-        <Navbar numberOfCartItems={numberOfCartItems}/>
+        <Navbar/>
         <div className="product-page__product-container">
             <div className="product-page__image-container">
               <img 
