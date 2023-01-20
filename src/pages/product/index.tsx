@@ -2,13 +2,13 @@ import "./style.css";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
 import Newsletter from "../../components/newsletter";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { selectNumberOfCartItems, setNumberOfItems } from "../../store/cartSlice";
+import { useAppDispatch } from "../../store/config";
 
 const Product = () => {
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const numberOfCartItems = useSelector(selectNumberOfCartItems);
   const increment = () => dispatch(setNumberOfItems(numberOfCartItems + 1));
   const decrement = () => {
